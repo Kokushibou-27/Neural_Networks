@@ -55,3 +55,7 @@ def forward_prop(W1, b1, W2, b2, W3, b3, X):
     A3 = exp_scores / np.sum(exp_scores, axis=0, keepdims=True)  # Softmax activation
 
     return Z1, A1, Z2, A2, Z3, A3
+
+def softmax(Z):
+    A = np.exp(Z)/sum(np.exp(Z))
+    return A
